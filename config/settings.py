@@ -9,7 +9,7 @@ DEBUG = os.getenv("DEBUG", "0") == "1"
 SECRET_KEY = os.getenv("SECRET_KEY", "")
 if not SECRET_KEY:
     raise ImproperlyConfigured("Задайте SECRET_KEY в .env (см. README.md).")
-ALLOWED_HOSTS = os.getenv("ALLOWED_HOSTS", "localhost,127.0.0.1").split(",")
+ALLOWED_HOSTS = os.getenv("ALLOWED_HOSTS", "https://diplomproject-2027.onrender.com").split(",")
 CSRF_TRUSTED_ORIGINS = [
     x for x in os.getenv("CSRF_TRUSTED_ORIGINS", "").split(",") if x
 ]
